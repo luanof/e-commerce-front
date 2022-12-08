@@ -57,7 +57,15 @@ export class OfertasService {
   ];
   constructor() { }
 
-  public getofertas(): Array<Ofertas> {
-    return this.ofertas;
+  public getofertas(): Promise<Ofertas[]> {
+    return new Promise((resolve, reject) => {
+      let teste = true;
+      if (teste) {
+        resolve(this.ofertas);
+      } else {
+        reject({ status: 404, mensage: 'servidor não encontrado' });
+      }
+
+    });
   }
 }
