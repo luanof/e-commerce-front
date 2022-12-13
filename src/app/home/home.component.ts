@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OfertasService } from '../service/ofertas.service';
+import { OfertasService } from '../Core/service/ofertas.service';
 import { Ofertas } from '../Shared/Models/ofertas.model';
 @Component({
   selector: 'app-home',

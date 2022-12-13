@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Ofertas } from '../Shared/Models/ofertas.model';
+import { Ofertas } from '../../Shared/Models/ofertas.model';
+import { Aula2apiService } from './Http/aula2api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OfertasService {
+  constructor(private aula2apiService: Aula2apiService) { }
   private ofertas: Array<Ofertas> = [
     {
       id: 1,
@@ -55,17 +57,12 @@ export class OfertasService {
       ]
     }
   ];
-  constructor() { }
 
-  public getofertas(): Promise<Ofertas[]> {
-    return new Promise((resolve, reject) => {
-      let teste = true;
-      if (teste) {
-        resolve(this.ofertas);
-      } else {
-        reject({ status: 404, mensage: 'servidor não encontrado' });
-      }
 
-    });
-  }
+  public async getofertas(): Promise<Ofertas[]> {
+    let resouce = await this.aula2apiService.get<Ofertas[]>();
+
+    return resouce;
+  };
 }
+
