@@ -9,7 +9,12 @@ export class OfertasService {
   constructor(private aula2apiService: Aula2apiService) { }
 
   public async getofertas(): Promise<Ofertas[]> {
-    let resouce = await this.aula2apiService.get<Ofertas[]>();
+    let resouce = await this.aula2apiService.get<Ofertas[]>(`http://localhost:3000/ofertas?destaque=true`);
+
+    return resouce;
+  };
+  public async getofertasporCategoria(): Promise<Ofertas[]> {
+    let resouce = await this.aula2apiService.get<Ofertas[]>(`http://localhost:3000/ofertas?categoria=restaurante`);
 
     return resouce;
   };

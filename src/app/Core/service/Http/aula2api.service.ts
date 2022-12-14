@@ -10,8 +10,8 @@ export class Aula2apiService {
   private Geturl(): string {
     return `http://localhost:3000/ofertas`;
   }
-  public async get<TData>(): Promise<TData> {
-    const url = this.Geturl();
+  public async get<TData>(url: string): Promise<TData> {
+
     return lastValueFrom(await this.Http.get<TData>(url));
   }
 
