@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { RestauranteComponent } from './restaurante/restaurante.component';
 import { DiversaoComponent } from './diversao/diversao.component';
+import { OfertaComponent } from './oferta/oferta.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DiversaoComponent } from './diversao/diversao.component';
     HomeComponent,
     RodapeComponent,
     RestauranteComponent,
-    DiversaoComponent
+    DiversaoComponent,
+    OfertaComponent
   ],
   imports: [
     BrowserModule,

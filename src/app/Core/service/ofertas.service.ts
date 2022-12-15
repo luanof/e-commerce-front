@@ -18,5 +18,10 @@ export class OfertasService {
 
     return resouce;
   };
+  public async getofertasporDiversao(): Promise<Ofertas[]> {
+    let resouce = await this.aula2apiService.get<Ofertas[]>(`http://localhost:3000/ofertas?categoria=diversao`);
+
+    return resouce;
+  };
 }
 
