@@ -13,6 +13,11 @@ export class OfertasService {
 
     return resouce;
   };
+  public async getofertasId(id: number): Promise<Ofertas> {
+    let resouce = await this.aula2apiService.get<Ofertas>(`http://localhost:3000/ofertas/${id}`);
+
+    return resouce;
+  };
   public async getofertasporCategoria(): Promise<Ofertas[]> {
     let resouce = await this.aula2apiService.get<Ofertas[]>(`http://localhost:3000/ofertas?categoria=restaurante`);
 
