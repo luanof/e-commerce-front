@@ -39,7 +39,9 @@ export class OfertasService {
   public getOndeFicaPorId(id: number): Promise<ondeFicaResult> {
     let resouce = this.aula2apiService.get<ondeFicaResult>(`${this.url_api}/onde-fica/${id}`);
 
-    return resouce ;
+    return resouce;
   }
+
+
 }
 
