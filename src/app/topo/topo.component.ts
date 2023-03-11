@@ -1,17 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable, Subject, switchMap, debounceTime, distinctUntilChanged } from 'rxjs';
 import { Aula2apiService } from '../Core/service/Http/aula2api.service';
+import { Ofertas } from '../Shared/Models/ofertas.model';
 
 @Component({
   selector: 'app-topo',
   templateUrl: './topo.component.html',
   styleUrls: ['./topo.component.scss']
 })
-export class TopoComponent {
+export class TopoComponent implements OnInit {
+  ofertas!: Ofertas[];
+  $ofertas!: Observable<Ofertas[]>;
+  sujectOferta: Subject<string> = new Subject<string>();
   constructor(private aula2apiService: Aula2apiService) { }
 
+
+
+  ngOnInit() {
+    this.$ofertas = this.sujectOferta.pipe(distinctUntilChanged(), debounceTime(1000), switchMap((termo: string) => {
+
+      return this.aula2apiService.pesquisa(termo);
+    }));
+    this.$ofertas.subscribe(res => this.ofertas = res);
+  }
   pesquisa(event: string): void {
-    console.log(event);
-    let teste = this.aula2apiService.pesquisa(event);
-    console.log(teste);
+ 
+    this.sujectOferta.next(event.trim());
   }
 }

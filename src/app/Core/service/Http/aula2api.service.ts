@@ -16,10 +16,6 @@ export class Aula2apiService {
   }
   public pesquisa(data: string): Observable<Ofertas[]> {
     let pesquisa = this.Http.get<Ofertas[]>(`${this.url_api}/ofertas?descricao_oferta_like=${data}`);
-    pesquisa.subscribe((x) => {
-      console.log(x);
-    },
-      (erro: any) => console.log(erro));
     return pesquisa;
   }
 
