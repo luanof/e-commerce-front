@@ -9,9 +9,10 @@ import { Ofertas } from '../Shared/Models/ofertas.model';
   styleUrls: ['./topo.component.scss']
 })
 export class TopoComponent implements OnInit {
-  ofertas!: Ofertas[];
+
   $ofertas!: Observable<Ofertas[]>;
   sujectOferta: Subject<string> = new Subject<string>();
+
   constructor(private aula2apiService: Aula2apiService) { }
 
 
@@ -21,10 +22,12 @@ export class TopoComponent implements OnInit {
 
       return this.aula2apiService.pesquisa(termo);
     }));
-    this.$ofertas.subscribe(res => this.ofertas = res);
+
   }
   pesquisa(event: string): void {
- 
+
     this.sujectOferta.next(event.trim());
   }
+
+
 }

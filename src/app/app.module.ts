@@ -12,6 +12,10 @@ import { OfertaComponent } from './oferta/oferta.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 
+// Pipe
+import { ReduzerFrases } from './Shared/pipe/reduzerFrases.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
     DiversaoComponent,
     OfertaComponent,
     ComoUsarComponent,
-    OndeFicaComponent
+    OndeFicaComponent,
+    ReduzerFrases
   ],
   imports: [
     BrowserModule,
