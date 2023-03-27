@@ -6,7 +6,7 @@
       "titulo": "Super Burger",
       "descricao_oferta": "Rodízio de Mini-hambúrger com opção de entrada.",
       "anunciante": "Original Burger",
-      "valor": 29.90,
+      "valor": 29.9,
       "destaque": true,
       "imagens": [
         {
@@ -29,7 +29,7 @@
       "titulo": "Cozinha Mexicana",
       "descricao_oferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
       "anunciante": "Mexicana",
-      "valor": 32.90,
+      "valor": 32.9,
       "destaque": true,
       "imagens": [
         {
@@ -52,7 +52,7 @@
       "titulo": "Pizzas Grandes",
       "descricao_oferta": "Pizza Grande, Mussarela, Marguerita ou outras!",
       "anunciante": "Nossa Pizza",
-      "valor": 21.90,
+      "valor": 21.9,
       "destaque": false,
       "imagens": [
         {
@@ -75,7 +75,7 @@
       "titulo": "Estância das águas",
       "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
       "anunciante": "Estância das águas",
-      "valor": 31.90,
+      "valor": 31.9,
       "destaque": true,
       "imagens": [
         {
@@ -104,7 +104,7 @@
       "titulo": "Kart",
       "descricao_oferta": "Bateria de Kart de 30 minutos.",
       "anunciante": "Speed Kart",
-      "valor": 54.90,
+      "valor": 54.9,
       "destaque": false,
       "imagens": [
         {
@@ -121,7 +121,7 @@
       "titulo": "Academia de tiro",
       "descricao_oferta": "Sessão de tiro dinâmico com Instrutor, Estande, Alvo e Equipamentos.",
       "anunciante": "Academia de Tiro",
-      "valor": 89.90,
+      "valor": 89.9,
       "destaque": false,
       "imagens": [
         {
@@ -160,29 +160,122 @@
     }
   ],
   "onde-fica": [
-		{
-			"id": 1,
-			"descricao": "Avenida João da Silva, 255, São Paulo - SP"
-		},
-		{
-			"id": 2,
-			"descricao": "Rua Francisco Mendes, 1000, Rio de Janeiro - RJ "
-		},
-		{
-			"id": 3,
-			"descricao": "Avenida Lúcio Rodrigues Alves, 33, Fortaleza - CE"
-		},
-		{
-			"id": 4,
-			"descricao": "Avenida José de Oliveira, 550, Campo Grande - MS"
-		},
-		{
-			"id": 5,
-			"descricao": "Avenida Júlia Abrão, 77, São Paulo - SP"
-		},
-		{
-			"id": 6,
-			"descricao": "Estrada Maria das Graças, 12, Salvador - BA "
-		}
-	]
+    {
+      "id": 1,
+      "descricao": "Avenida João da Silva, 255, São Paulo - SP"
+    },
+    {
+      "id": 2,
+      "descricao": "Rua Francisco Mendes, 1000, Rio de Janeiro - RJ "
+    },
+    {
+      "id": 3,
+      "descricao": "Avenida Lúcio Rodrigues Alves, 33, Fortaleza - CE"
+    },
+    {
+      "id": 4,
+      "descricao": "Avenida José de Oliveira, 550, Campo Grande - MS"
+    },
+    {
+      "id": 5,
+      "descricao": "Avenida Júlia Abrão, 77, São Paulo - SP"
+    },
+    {
+      "id": 6,
+      "descricao": "Estrada Maria das Graças, 12, Salvador - BA "
+    }
+  ],
+  "pedidos": [
+    {
+      "Endereco": "pedido",
+      "Numero": 43534,
+      "Complemento": "pedido",
+      "formaPagamento": "Dinheiro",
+      "id": 2
+    },
+    {
+      "Endereco": "teste",
+      "Numero": 43564,
+      "Complemento": "date.id",
+      "formaPagamento": "Dinheiro",
+      "id": 3
+    },
+    {
+      "Endereco": "Rua André Rocha",
+      "Numero": 3641,
+      "Complemento": "id",
+      "formaPagamento": "Dinheiro",
+      "id": 4
+    },
+    {
+      "Endereco": "this.idPedidoCompra",
+      "Numero": 34,
+      "Complemento": "this.idPedidoCompra",
+      "formaPagamento": "Dinheiro",
+      "id": 5
+    },
+    {
+      "Endereco": "date",
+      "Numero": 34,
+      "Complemento": "date",
+      "formaPagamento": "Dinheiro",
+      "id": 6
+    },
+    {
+      "Endereco": "id",
+      "Numero": 345,
+      "Complemento": "id",
+      "formaPagamento": "Dinheiro",
+      "id": 7
+    },
+    {
+      "Endereco": "idPedidoCompra",
+      "Numero": 324,
+      "Complemento": "idPedidoCompra",
+      "formaPagamento": "Dinheiro",
+      "id": 8
+    },
+    {
+      "Endereco": "Input",
+      "Numero": 345,
+      "Complemento": "Input",
+      "formaPagamento": "Dinheiro",
+      "id": 9
+    },
+    {
+      "Endereco": "Input",
+      "Numero": 34534,
+      "Complemento": "Input",
+      "formaPagamento": "Dinheiro",
+      "id": 10
+    },
+    {
+      "Endereco": "Input",
+      "Numero": 43534,
+      "Complemento": "Input",
+      "formaPagamento": "Dinheiro",
+      "id": 11
+    },
+    {
+      "Endereco": "idPedidoCompra",
+      "Numero": 43543,
+      "Complemento": "idPedidoCompra",
+      "formaPagamento": "Dinheiro",
+      "id": 12
+    },
+    {
+      "Endereco": "strong",
+      "Numero": 34,
+      "Complemento": "strong",
+      "formaPagamento": "Debito",
+      "id": 13
+    },
+    {
+      "Endereco": "*ngIf=\"idPedidoCompra\"",
+      "Numero": 34545,
+      "Complemento": "*ngIf=\"idPedidoCompra\"",
+      "formaPagamento": "Dinheiro",
+      "id": 14
+    }
+  ]
 }

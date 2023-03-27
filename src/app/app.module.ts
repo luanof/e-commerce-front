@@ -14,6 +14,8 @@ import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 
 // Pipe
 import { ReduzerFrases } from './Shared/pipe/reduzerFrases.pipe';
+import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
+import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component';
 
 
 
@@ -28,7 +30,9 @@ import { ReduzerFrases } from './Shared/pipe/reduzerFrases.pipe';
     OfertaComponent,
     ComoUsarComponent,
     OndeFicaComponent,
-    ReduzerFrases
+    ReduzerFrases,
+    OrdemCompraComponent,
+    OrdemCompraSucessoComponent
   ],
   imports: [
     BrowserModule,
