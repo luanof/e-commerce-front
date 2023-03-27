@@ -45,7 +45,7 @@ export class OrdemCompraComponent implements OnInit {
   }
 
 
-  ferification(): boolean {
+  verification(): boolean {
     return this.Endereco == '' ||
       this.Numero == 0 ||
       this.Complemento == '' ||

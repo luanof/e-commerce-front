@@ -112,7 +112,6 @@
             <option value="Dinheiro" selected="{{formaPagamento == 'Dinheiro'? 'selected':''}}">Dinheiro</option>
             <option value="Debito" selected="{{formaPagamento == 'Debito'? 'selected':''}}">Débito</option>
           </select>
-
           <div *ngIf="!formaPagamentoPrimitivo">
             <p class="text-danger" *ngIf="formaPagamento ==''">Selecione uma forma de pagamento</p>
           </div>
@@ -121,7 +120,7 @@
 
       <hr />
       <button type="button" class="btn btn-primary btn-lg" (click)="comfirmarCompra()"
-        [disabled]="ferification()">Cofirmar compra</button>
+        [disabled]="verification()">Cofirmar compra</button>
     </form>
   </div>
 </div>
