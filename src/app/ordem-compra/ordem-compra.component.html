@@ -3,73 +3,63 @@
     <form novalidate #formulario="ngForm" (ngSubmit)="comfirmarCompra()">
       <h5>Sua Compra</h5>
       <hr />
+      <div *ngIf="cout > 0">
+        <div
+          class="row w-100"
+          style="
+            background: #fafafa;
+            padding: 20px;
+            border-bottom: solid 1px #f0f0f0;
+          "
+          *ngFor="let item of items"
+        >
+          <div class="form-group col-1">
+            <img [src]="item.imagens[0].url" class="img-fluid" />
+          </div>
+          <div class="form-group col-6">
+            {{ item.titulo }}
+            <br />
+            {{ item.descricao_oferta }}
+          </div>
 
-      <div
-        class="row w-100"
-        style="
-          background: #fafafa;
-          padding: 20px;
-          border-bottom: solid 1px #f0f0f0;
-        "
-      >
-        <div class="form-group col-1">
-          <img src="/assets/ofertas/1/img1.jpg" class="img-fluid" />
-        </div>
-        <div class="form-group col-6">
-          Super Burger
-          <br />
-          Rodízio de Mini-hambúrger com opção de entrada.
-        </div>
-
-        <div class="col">
-          <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-link">-</button>
-              1
-              <button type="button" class="btn btn-link">+</button>
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <button
+                  type="button"
+                  class="btn btn-link"
+                  (click)="diminuitCout(item.id)"
+                >
+                  -
+                </button>
+                {{ item.quantidade }}
+                <button
+                  type="button"
+                  class="btn btn-link"
+                  (click)="somarCout(item.id)"
+                >
+                  +
+                </button>
+              </div>
             </div>
+          </div>
+
+          <div class="form-group col-sm-3 d-flex justify-content-end">
+            {{ item.quantidade * item.valor | currency : "BRL" }}
           </div>
         </div>
 
-        <div class="form-group col-sm-3 d-flex justify-content-end">29.90</div>
-      </div>
-
-      <div
-        class="row w-100"
-        style="
-          background: #fafafa;
-          padding: 20px;
-          border-bottom: solid 1px #f0f0f0;
-        "
-      >
-        <div class="form-group col-sm-1">
-          <img src="/assets/ofertas/4/img1.jpg" class="img-fluid" />
-        </div>
-        <div class="form-group col-6">
-          Estância das águas
-          <br />
-          Diversão garantida com piscinas, trilhas e muito mais.
-        </div>
-
-        <div class="col">
-          <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-link">-</button>
-              1
-              <button type="button" class="btn btn-link">+</button>
-            </div>
+        <div class="row mt-3">
+          <div class="form-group col d-flex justify-content-end">
+            <h4>Total do pedido: {{ cout | currency : "BRL" }}</h4>
           </div>
         </div>
-
-        <div class="form-group col-sm-3 d-flex justify-content-end">31.90</div>
+        <br />
       </div>
 
-      <div class="row mt-3">
-        <div class="form-group col d-flex justify-content-end">
-          <h4>Total do pedido: 61.80</h4>
-        </div>
+      <div *ngIf="cout <= 0" style="display: flex; justify-content: center">
+        <p>Sua lista está vazia</p>
       </div>
-      <br />
 
       <h5>Dados de entrega</h5>
       <hr />
@@ -154,7 +144,7 @@
       <button
         type="submit"
         class="btn btn-primary btn-lg"
-        [disabled]="!formulario.valid"
+        [disabled]="!formulario.valid || !verificationProduct"
       >
         Cofirmar compra
       </button>

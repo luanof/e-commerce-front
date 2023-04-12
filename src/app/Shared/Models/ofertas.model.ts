@@ -7,9 +7,8 @@ export class Ofertas {
   public valor!: number;
   public destaque!: boolean;
   public imagens!: Array<imgoferta>;
-
 }
 
 interface imgoferta {
-  url: string
+  url: string;
 }

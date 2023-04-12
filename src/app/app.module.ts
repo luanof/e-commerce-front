@@ -17,6 +17,7 @@ import { ReduzerFrases } from './Shared/pipe/reduzerFrases.pipe';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component';
 import { FormsModule } from '@angular/forms';
+import ItemPedidos from './Shared/Models/item-pedidos.model';
 
 
 
@@ -33,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     OndeFicaComponent,
     ReduzerFrases,
     OrdemCompraComponent,
-    OrdemCompraSucessoComponent
+    OrdemCompraSucessoComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ItemPedidos],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
